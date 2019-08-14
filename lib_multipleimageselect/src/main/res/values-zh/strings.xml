@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">多图片选择</string>
+
+    <string name="album_view">选择相册</string>
+    <string name="image_view">选择图片</string>
+
+    <string name="add">确定</string>
+    <string name="selected">已选</string>
+    <string name="limit_exceeded">最多选择%d张图片</string>
+
+    <string name="permission_denied">未获得权限！</string>
+    <string name="permission_denied_albums">允许访问设备上的照片、媒体和文件以查看相册</string>
+    <string name="permission_denied_images">允许访问设备上的照片、媒体和文件以查看图像</string>
+    <string name="grant_permission">许可权限</string>
+
+    <string name="error_null_cursor">糟糕，出错了！</string>
+</resources>

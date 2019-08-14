@@ -19,8 +19,11 @@ android {
 }
 
 dependencies {
-    implementation 'com.soundcloud.android.crop:lib_crop:1.0.0'
-    implementation 'com.darsh.multipleimageselect:multipleimageselect:1.0.5'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.appcompat:appcompat:1.1.0-rc01'
     implementation 'me.shaohui.advancedluban:library:1.3.2'
+    implementation project(':lib_crop')//https://github.com/Shuaigoal/android-crop
+    implementation project(':lib_multipleimageselect')//https://github.com/Shuaigoal/MultipleImageSelect
 }
 //apply from: "bintrayUpload.gradle"

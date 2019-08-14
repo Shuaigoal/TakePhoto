@@ -2,7 +2,6 @@ package org.devio.takephoto.app;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 
 import org.devio.takephoto.permission.PermissionManager;
@@ -11,6 +10,8 @@ import org.devio.takephoto.model.TContextWrap;
 import org.devio.takephoto.model.TResult;
 import org.devio.takephoto.permission.InvokeListener;
 import org.devio.takephoto.permission.TakePhotoInvocationHandler;
+
+import androidx.fragment.app.FragmentActivity;
 
 /**
  * 继承这个类来让Activity获取拍照的能力<br>
