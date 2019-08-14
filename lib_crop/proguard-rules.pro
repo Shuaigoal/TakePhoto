@@ -15,11 +15,10 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
--dontwarn androidx.appcompat.**
--keep class androidx.appcompat.** { *; }
+-dontwarn androidx.annotation.**
+-keep class androidx.annotation.** { *; }
+-dontwarn androidx.legacy.**
+-keep class androidx.legacy.** { *; }
 
 -keepattributes InnerClasses
 -dontoptimize
-
--keep class com.github.bumptech.glide.** { *; }
--dontwarn com.github.bumptech.glide.**
