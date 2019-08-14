@@ -9,7 +9,7 @@ import android.widget.LinearLayout;
 
 import com.bumptech.glide.Glide;
 
-import org.jph.takephoto.model.TImage;
+import com.jph.takephoto.model.TImage;
 
 import java.io.File;
 import java.util.ArrayList;

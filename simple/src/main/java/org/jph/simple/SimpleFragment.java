@@ -7,9 +7,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.jph.takephoto.app.TakePhotoFragment;
-import org.jph.takephoto.model.TImage;
-import org.jph.takephoto.model.TResult;
+import com.jph.takephoto.app.TakePhotoFragment;
+import com.jph.takephoto.model.TImage;
+import com.jph.takephoto.model.TResult;
 
 import java.util.ArrayList;
 

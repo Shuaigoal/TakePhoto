@@ -6,11 +6,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 
-import org.jph.takephoto.app.TakePhoto;
-import org.jph.takephoto.compress.CompressConfig;
-import org.jph.takephoto.model.CropOptions;
-import org.jph.takephoto.model.LubanOptions;
-import org.jph.takephoto.model.TakePhotoOptions;
+import com.jph.takephoto.app.TakePhoto;
+import com.jph.takephoto.compress.CompressConfig;
+import com.jph.takephoto.model.CropOptions;
+import com.jph.takephoto.model.LubanOptions;
+import com.jph.takephoto.model.TakePhotoOptions;
 
 import java.io.File;
 
