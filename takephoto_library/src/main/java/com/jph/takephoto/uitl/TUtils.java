@@ -18,7 +18,7 @@ import com.jph.takephoto.model.TException;
 import com.jph.takephoto.model.TExceptionType;
 import com.jph.takephoto.model.TImage;
 import com.jph.takephoto.model.TIntentWap;
-import org.jph.takephoto.R;
+import com.jph.takephoto.R;
 import com.jph.takephoto.model.TContextWrap;
 import com.soundcloud.android.crop.Crop;
 

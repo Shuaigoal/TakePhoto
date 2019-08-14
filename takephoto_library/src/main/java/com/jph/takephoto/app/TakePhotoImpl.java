@@ -285,7 +285,7 @@ public class TakePhotoImpl implements TakePhoto {
         }
         this.outPutUri = outPutUri;
         if (!TImageFiles.checkMimeType(contextWrap.getActivity(), TImageFiles.getMimeType(contextWrap.getActivity(), imageUri))) {
-            Toast.makeText(contextWrap.getActivity(), contextWrap.getActivity().getResources().getText(org.jph.takephoto.R.string.tip_type_not_image),
+            Toast.makeText(contextWrap.getActivity(), contextWrap.getActivity().getResources().getText(com.jph.takephoto.R.string.tip_type_not_image),
                 Toast.LENGTH_SHORT).show();
             throw new TException(TExceptionType.TYPE_NOT_IMAGE);
         }
@@ -317,7 +317,7 @@ public class TakePhotoImpl implements TakePhoto {
                 takeResult(TResult.of(multipleCrop.gettImages()));
             } else {
                 takeResult(TResult.of(multipleCrop.gettImages()),
-                    outPutUri.getPath() + contextWrap.getActivity().getResources().getString(org.jph.takephoto.R.string.msg_crop_canceled));
+                    outPutUri.getPath() + contextWrap.getActivity().getResources().getString(com.jph.takephoto.R.string.msg_crop_canceled));
             }
         } else {
             cropWithNonException(multipleCrop.getUris().get(index + 1), multipleCrop.getOutUris().get(index + 1), cropOptions);
@@ -436,7 +436,7 @@ public class TakePhotoImpl implements TakePhoto {
         } else {
             if (showCompressDialog) {
                 wailLoadDialog = TUtils.showProgressDialog(contextWrap.getActivity(),
-                    contextWrap.getActivity().getResources().getString(org.jph.takephoto.R.string.tip_compress));
+                    contextWrap.getActivity().getResources().getString(com.jph.takephoto.R.string.tip_compress));
             }
 
             CompressImageImpl.of(contextWrap.getActivity(), compressConfig, result.getImages(), new CompressImage.CompressListener() {
@@ -457,7 +457,7 @@ public class TakePhotoImpl implements TakePhoto {
                         deleteRawFile(images);
                     }
                     handleTakeCallBack(TResult.of(images),
-                        String.format(contextWrap.getActivity().getResources().getString(org.jph.takephoto.R.string.tip_compress_failed),
+                        String.format(contextWrap.getActivity().getResources().getString(com.jph.takephoto.R.string.tip_compress_failed),
                             message.length > 0 ? message[0] : "", msg, result.getImage().getCompressPath()));
                     if (wailLoadDialog != null && !contextWrap.getActivity().isFinishing()) {
                         wailLoadDialog.dismiss();
@@ -480,7 +480,7 @@ public class TakePhotoImpl implements TakePhoto {
         if (message.length > 0) {
             listener.takeFail(result, message[0]);
         } else if (multipleCrop != null && multipleCrop.hasFailed) {
-            listener.takeFail(result, contextWrap.getActivity().getResources().getString(org.jph.takephoto.R.string.msg_crop_failed));
+            listener.takeFail(result, contextWrap.getActivity().getResources().getString(com.jph.takephoto.R.string.msg_crop_failed));
         } else if (compressConfig != null) {
             boolean hasFailed = false;
             for (TImage image : result.getImages()) {
@@ -490,7 +490,7 @@ public class TakePhotoImpl implements TakePhoto {
                 }
             }
             if (hasFailed) {
-                listener.takeFail(result, contextWrap.getActivity().getString(org.jph.takephoto.R.string.msg_compress_failed));
+                listener.takeFail(result, contextWrap.getActivity().getString(com.jph.takephoto.R.string.msg_compress_failed));
             } else {
                 listener.takeSuccess(result);
             }

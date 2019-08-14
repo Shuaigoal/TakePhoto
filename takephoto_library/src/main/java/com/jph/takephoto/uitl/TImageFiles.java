@@ -124,7 +124,7 @@ public class TImageFiles {
         boolean isPicture =
             TextUtils.isEmpty(minType) ? false : ".jpg|.gif|.png|.bmp|.jpeg|.webp|".contains(minType.toLowerCase()) ? true : false;
         if (!isPicture) {
-            Toast.makeText(context, context.getResources().getText(org.jph.takephoto.R.string.tip_type_not_image), Toast.LENGTH_SHORT).show();
+            Toast.makeText(context, context.getResources().getText(com.jph.takephoto.R.string.tip_type_not_image), Toast.LENGTH_SHORT).show();
         }
         return isPicture;
     }

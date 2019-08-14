@@ -76,7 +76,7 @@ public class TakePhotoFragment extends Fragment implements TakePhoto.TakeResultL
 
     @Override
     public void takeCancel() {
-        Log.i(TAG, getResources().getString(org.jph.takephoto.R.string.msg_operation_canceled));
+        Log.i(TAG, getResources().getString(com.jph.takephoto.R.string.msg_operation_canceled));
     }
 
     @Override

@@ -12,7 +12,7 @@ import com.jph.takephoto.permission.InvokeListener;
 import com.jph.takephoto.permission.PermissionManager;
 import com.jph.takephoto.permission.TakePhotoInvocationHandler;
 
-import org.jph.takephoto.R;
+import com.jph.takephoto.R;
 
 /**
  * 继承这个类来让Activity获取拍照的能力<br>
