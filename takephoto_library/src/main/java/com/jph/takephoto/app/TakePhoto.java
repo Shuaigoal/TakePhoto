@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.jph.takephoto.compress.CompressConfig;
 import com.jph.takephoto.model.CropOptions;
-import com.jph.takephoto.permission.PermissionManager;
 import com.jph.takephoto.model.MultipleCrop;
 import com.jph.takephoto.model.TException;
 import com.jph.takephoto.model.TResult;
 import com.jph.takephoto.model.TakePhotoOptions;
+import com.jph.takephoto.permission.PermissionManager;
 
 
 /**

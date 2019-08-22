@@ -7,24 +7,25 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
-import androidx.core.content.FileProvider;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
 import com.darsh.multipleimageselect.models.Image;
+import com.jph.takephoto.R;
 import com.jph.takephoto.model.CropOptions;
+import com.jph.takephoto.model.TContextWrap;
 import com.jph.takephoto.model.TException;
 import com.jph.takephoto.model.TExceptionType;
 import com.jph.takephoto.model.TImage;
 import com.jph.takephoto.model.TIntentWap;
-import com.jph.takephoto.R;
-import com.jph.takephoto.model.TContextWrap;
 import com.soundcloud.android.crop.Crop;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+
+import androidx.core.content.FileProvider;
 
 /**
  * 工具类

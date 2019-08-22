@@ -4,12 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.jph.takephoto.model.InvokeParam;
 import com.jph.takephoto.model.TContextWrap;
+import com.jph.takephoto.model.TResult;
 import com.jph.takephoto.permission.InvokeListener;
 import com.jph.takephoto.permission.PermissionManager;
 import com.jph.takephoto.permission.TakePhotoInvocationHandler;
-import com.jph.takephoto.model.InvokeParam;
-import com.jph.takephoto.model.TResult;
 
 import androidx.fragment.app.Fragment;
 

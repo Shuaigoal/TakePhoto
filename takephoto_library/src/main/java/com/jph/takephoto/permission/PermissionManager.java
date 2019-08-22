@@ -3,19 +3,20 @@ package com.jph.takephoto.permission;
 import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
-import androidx.annotation.NonNull;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-import com.jph.takephoto.uitl.TConstant;
 import com.jph.takephoto.app.TakePhoto;
 import com.jph.takephoto.model.InvokeParam;
 import com.jph.takephoto.model.TContextWrap;
+import com.jph.takephoto.uitl.TConstant;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+
+import androidx.annotation.NonNull;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
 /**
  * Created by penn on 16/9/22.
