@@ -20,6 +20,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Locale;
 import java.util.UUID;
 
 /**
@@ -107,7 +108,8 @@ public class TImageFiles {
      * @return
      */
     public static boolean checkMimeType(Context context,String minType) {
-        boolean isPicture=TextUtils.isEmpty(minType)?false:".jpg|.gif|.png|.bmp|.jpeg|.webp|".contains(minType.toLowerCase())?true:false;
+        boolean isPicture=TextUtils.isEmpty(minType)?false
+                :".jpg|.gif|.png|.bmp|.jpeg|.webp|".contains(minType.toLowerCase(Locale.getDefault()))?true:false;
         if (!isPicture)Toast.makeText(context,context.getResources().getText(R.string.tip_type_not_image),Toast.LENGTH_SHORT).show();
         return isPicture;
     }

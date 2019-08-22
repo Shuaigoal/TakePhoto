@@ -1,5 +1,6 @@
 package com.jph.takephoto.uitl;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -7,7 +8,9 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
-import android.support.v4.content.FileProvider;
+
+import androidx.annotation.RequiresApi;
+import androidx.core.content.FileProvider;
 import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
@@ -25,6 +28,7 @@ import com.soundcloud.android.crop.Crop;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 /**
  * 工具类
@@ -90,6 +94,7 @@ public class TUtils {
      * @param isCrop 是否为裁切照片的Intent
      * @throws TException
      */
+    @TargetApi(Build.VERSION_CODES.M)
     public static void sendIntentBySafely(TContextWrap contextWrap, List<TIntentWap> intentWapList, int defaultIndex, boolean isCrop)throws TException{
         if (defaultIndex+1>intentWapList.size())throw new TException(isCrop? TExceptionType.TYPE_NO_MATCH_PICK_INTENT:TExceptionType.TYPE_NO_MATCH_CROP_INTENT);
         TIntentWap intentWap=intentWapList.get(defaultIndex);
@@ -103,7 +108,8 @@ public class TUtils {
     /**
      * 拍照前检查是否有相机
      **/
-    public static void captureBySafely(TContextWrap contextWrap,TIntentWap intentWap)throws TException{
+    @TargetApi(Build.VERSION_CODES.M)
+    public static void captureBySafely(TContextWrap contextWrap, TIntentWap intentWap)throws TException{
         List result=contextWrap.getActivity().getPackageManager().queryIntentActivities(intentWap.getIntent(),PackageManager.MATCH_ALL);
         if (result.isEmpty()){
             Toast.makeText(contextWrap.getActivity(),contextWrap.getActivity().getResources().getText(R.string.tip_no_camera),Toast.LENGTH_SHORT).show();
@@ -119,6 +125,7 @@ public class TUtils {
      * @param outPutUri
      * @param options
      */
+    @TargetApi(Build.VERSION_CODES.M)
     public static void cropWithOtherAppBySafely(TContextWrap contextWrap, Uri imageUri, Uri outPutUri, CropOptions options){
         Intent nativeCropIntent=IntentUtils.getCropIntentWithOtherApp(imageUri, outPutUri,options);
         List result=contextWrap.getActivity().getPackageManager().queryIntentActivities(nativeCropIntent,PackageManager.MATCH_ALL);
@@ -170,7 +177,7 @@ public class TUtils {
         Log.i(TAG,"release:"+release+"sdk:"+sdk);
         String manufacturer = android.os.Build.MANUFACTURER;
         if (!TextUtils.isEmpty(manufacturer)) {
-            if (manufacturer.toLowerCase().contains("lenovo")) {//对于联想的手机返回数据
+            if (manufacturer.toLowerCase(Locale.getDefault()).contains("lenovo")) {//对于联想的手机返回数据
                 return true;
             }
         }

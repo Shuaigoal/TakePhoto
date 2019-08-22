@@ -2,7 +2,6 @@ package com.jph.simple;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +11,8 @@ import com.jph.takephoto.model.TImage;
 import com.jph.takephoto.model.TResult;
 
 import java.util.ArrayList;
+
+import androidx.annotation.Nullable;
 
 
 /**

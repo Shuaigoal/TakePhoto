@@ -17,9 +17,12 @@
 #}
 
 
--dontwarn android.support.**
--keep class android.support.** { *; }
-
+-dontwarn androidx.annotation.**
+-keep class androidx.annotation.** { *; }
+-dontwarn androidx.legacy.**
+-keep class androidx.legacy.** { *; }
+-dontwarn androidx.appcompat.**
+-keep class androidx.appcompat.** { *; }
 
 -keepattributes InnerClasses
 -dontoptimize
